@@ -38,7 +38,8 @@ var component = new Component({
         }
     });
 component.add( 
-    /* addition instance of Component */
+    new Button(), // The instance of Component
+    new Button()  // [Button class](https://github.com/spasdk/component-button)
 );
 component.focus();
 ```
