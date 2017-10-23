@@ -23,8 +23,42 @@ npm install spa-component
 Add the singleton to the scope:
 
 ```js
-var component = require('spa-component');
+var Component = require('spa-component');
 ```
+Create instance with custom config:
+
+```javascript
+var component = new Component({
+        $node: document.getElementById(id),
+        className: 'bootstrap responsive',
+        events: {
+            click: function () { 
+                // some you`r actions 
+            }
+        }
+    });
+component.add( 
+    /* addition inctance of Component */
+);
+component.focus();
+```
+
+### Constructor config ###
+
+
+Name       | Type                      | Default value | Description
+---------- | ------------------------- | ------------- | -------------
+id         | Element                   | cid(0-n)      | component unique identifier (generated if not set)
+className  | String                    | name          | space-separated list of classes for "className" property of this.$node
+$node      | Element                   | null          | DOM element/fragment to be a component outer container
+$body      | Element                   | null          | DOM element/fragment to be a component inner container (by default is the same as $node)
+parent     | Component                 | null          | link to the parent component which has this component as a child
+children   | Array.<Component>         | []            | list of components in this component
+events     | Object.<string, function> | {}            | list of event callbacks
+visible    | boolean                   | true          | component initial visibility state flag
+focusable  | boolean                   | true          | component can accept focus or not
+propagate  | boolean                   | false         | allow to emit events to the parent component
+
 
 
 ## Development mode ##
