@@ -29,14 +29,14 @@ Create instance with custom config:
 
 ```javascript
 var component = new Component({
-        $node: document.getElementById(id),
-        className: 'bootstrap responsive',
-        events: {
-            click: function () { 
-                // some you`r actions 
-            }
+    $node: document.getElementById(id),
+    className: 'bootstrap responsive',
+    events: {
+        click: function () { 
+            // some you`r actions 
         }
-    });
+    }
+});
 component.add( 
     new Button(), // The instance of Component
     new Button()  // [Button class](https://github.com/spasdk/component-button)
