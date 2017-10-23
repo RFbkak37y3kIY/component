@@ -38,7 +38,7 @@ var component = new Component({
         }
     });
 component.add( 
-    /* addition inctance of Component */
+    /* addition instance of Component */
 );
 component.focus();
 ```
@@ -55,9 +55,9 @@ $body      | Element                   | null          | DOM element/fragment to
 parent     | Component                 | null          | link to the parent component which has this component as a child
 children   | Array.<Component>         | []            | list of components in this component
 events     | Object.<string, function> | {}            | list of event callbacks
-visible    | boolean                   | true          | component initial visibility state flag
-focusable  | boolean                   | true          | component can accept focus or not
-propagate  | boolean                   | false         | allow to emit events to the parent component
+visible    | Boolean                   | true          | component initial visibility state flag
+focusable  | Boolean                   | true          | component can accept focus or not
+propagate  | Boolean                   | false         | allow to emit events to the parent component
 
 
 
